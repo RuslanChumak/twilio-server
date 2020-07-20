@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  // Main jumbotron
+  .jumbotron.bicycle-polo-background
+    .container.bicycle-polo-text
+      h1.text-center
+        strong Birchwood Bicycle Polo Co.
+ 
+        
+  .container
+    h2#support Contact support
+  
+    .row
+      .col-md-6.col-md-push-6
+        .panel.panel-info.client-controls
+          .panel-heading
+            h3.panel-title Talk to support now
+          .panel-body
+            p
+              strong Status
+            #call-status.well.well-sm
+              | Connecting to Twilio...
+            button.btn.btn-lg.btn-primary.call-support-button(onclick="callSupport()")
+              span.glyphicon.glyphicon-earphone(aria-hidden="true")
+              |  Call support
+            button.btn.btn-lg.btn-danger.hangup-button(disabled="", onclick="hangUp()") Hang up
+      
+      .col-md-6.col-md-pull-6
+        form(class="new-ticket")
+          
+          .form-group
+            label Phone Number:
+            input.form-control(type='text', name="phone_number", placeholder='+16887665773')
+        
+            
+   
